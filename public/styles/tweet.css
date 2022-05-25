@@ -81,6 +81,8 @@ article.tweets div.timeStamp {
 }
 
 article.tweets div.icons {
+  display: flex;
+  justify-content: space-evenly;
   position: absolute;
   right: 150px;
   font-size: 20px;

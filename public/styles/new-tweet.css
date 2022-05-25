@@ -34,4 +34,8 @@
   outline: none;
 }
 
+.new-tweet button:hover {
+  color: rgb(57, 40, 132);
+}
+
 
