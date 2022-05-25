@@ -8,3 +8,8 @@ header {
   background-color: #ffa200;
   background-image: url(http://www.transparenttextures.com/patterns/back-pattern.png);
 }
+
+header.avatar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

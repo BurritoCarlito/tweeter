@@ -1,0 +1,92 @@
+section.feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+article.tweets {
+  display: flex;
+  width: 80vw;
+  border: 3px solid #000000;
+  border-radius: 11px;
+  justify-content: space-between;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+article.tweets header {
+  display: flex;
+  background-color: transparent;
+  justify-content: space-between;
+}
+
+article.tweets div#avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article.tweets img {
+  position: absolute;
+  left: 180px;
+}
+
+article.tweets header p {
+  font-weight: lighter ;
+}
+
+article.tweets header h2 {
+  position: absolute;
+  margin-top: 30px;
+  left: 250px;
+}
+
+article.tweets div.username {
+  position: absolute;
+  font-weight: bold;
+  opacity: 50%;
+  margin-top: 30px;
+  right: 150px;
+}
+
+article.tweet {
+  display: flex;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+
+article.tweets:hover {
+  box-shadow: 5px 10px black;
+}
+
+article.tweets footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+article.tweets footer div{
+  display: flex;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+article.tweets div.timeStamp {
+  position: absolute;
+  left: 150px;
+  margin-bottom: 30px;
+}
+
+article.tweets div.icons {
+  position: absolute;
+  right: 150px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+article.tweets div.icons:hover {
+  color: purple;
+}

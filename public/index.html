@@ -28,6 +28,9 @@
     <!-- New-tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Tweet-Article CSS -->
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -48,7 +51,7 @@
     </nav>
 
     <header>
-      <div>
+      <div class="avatar">
         <img src="/images/profile-hex.png">
       </div>
       <br>
@@ -69,10 +72,37 @@
           </div>
         </form>
       </section>
-      <h1>Hello</h1>
-      <p>Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. Does everybody know that pig named Lorem Ipsum? An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.
-      </p>
-
+      
+      <section class="feed">
+        <article class="tweets">
+          <header>
+            <div id="avatar">
+              <img src=""></img>
+              <h2>
+                BBaller
+              </h2>
+              <div class="username">
+                @BasketballFanatic
+              </div>
+            </div>
+            <div class="tweet">
+              <p>
+                The 2022 NBA Draft is on June 23rd. Can't Wait to see who will get drafted.
+              </p>
+            </div>
+            <footer>
+              <div class="timeStamp">
+                  10 days ago
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-flag"></i>
+                <i class="fa-solid fa-retweet"></i>
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </footer>
+          </header>
+        </article>
+      </section>
     </main>
   </body>
 </html>
