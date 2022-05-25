@@ -81,5 +81,11 @@ $(document).ready(() => {
   };
   
   renderTweets(data);
+
+  $(".form").submit(function() {
+    console.log("CLICK");
+    event.preventDefault()
+  });
+  
 })
 
