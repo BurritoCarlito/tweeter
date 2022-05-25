@@ -82,10 +82,24 @@ $(document).ready(() => {
   
   renderTweets(data);
 
-  $(".form").submit(function() {
+  $(".form").submit(function(event) {
     console.log("CLICK");
     event.preventDefault()
+
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: $(".form").serialize(),
+      success: () => {
+        console.log("we did it")
+      } 
+    });
+
+
+    // let post = $.post("http://localhost:8080/");
+    // console.log(post);
   });
+
   
 })
 
