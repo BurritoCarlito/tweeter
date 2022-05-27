@@ -41,7 +41,6 @@ $(document).ready(() => {
   function renderTweets(tweetData) {
     for (let tweet of tweetData) {
       const $tweet = createTweetElement(tweet);
-  
       console.log("........", $tweet);
       $(".tweets-container").append($tweet);
     }
@@ -60,15 +59,15 @@ $(document).ready(() => {
       } else if (info[0].value.length > 140) {
         alert("Tweet Cannot be longer than 140 characters")
       } else {
-  
+
+
     $.ajax({
       type: "POST",
       url: "/tweets",
-      data: $(".form").serialize(),
-      success: () => {
-        console.log($(".form").serialize());
-      } 
-    });
+      data: $(this).serialize(),
+    })
+    .then(loadTweets)
+    .then($(".form")[0].reset());
   }
   });
 
@@ -76,9 +75,9 @@ $(document).ready(() => {
     console.log("loading tweets")
     $.ajax("/tweets", { method: "GET" })
       .then( tweets => renderTweets(tweets))
-  };
+  }
 
-  loadTweets();
+  // loadTweets()
 
 });
 
