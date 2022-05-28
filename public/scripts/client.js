@@ -8,6 +8,12 @@ $(document).ready(() => {
 
     // const oneTweet = createTweetElement(data)
     // $('.feed').append(oneTweet)
+  
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   function createTweetElement(tweetData) {
     const tweet = `<article class="tweets">
@@ -21,7 +27,7 @@ $(document).ready(() => {
               </div>
               </header>
               <div class="tweet">
-                <p>${tweetData.content.text}</p>
+                <p>${escape(tweetData.content.text)}</p>
               </div>
               <footer>
                 <div class="timeStamp">
@@ -41,7 +47,6 @@ $(document).ready(() => {
   function renderTweets(tweetData) {
     for (let tweet of tweetData) {
       const $tweet = createTweetElement(tweet);
-      console.log("........", $tweet);
       $(".tweets-container").append($tweet);
     }
     return;
@@ -66,6 +71,7 @@ $(document).ready(() => {
       url: "/tweets",
       data: $(this).serialize(),
     })
+    .then($(".form").text())
     .then(loadTweets)
     .then($(".form")[0].reset());
   }
@@ -74,10 +80,10 @@ $(document).ready(() => {
   function loadTweets() {
     console.log("loading tweets")
     $.ajax("/tweets", { method: "GET" })
-      .then( tweets => renderTweets(tweets))
+      .then(tweets => renderTweets(tweets))
   }
 
-  // loadTweets()
+  loadTweets();
 
 });
 
