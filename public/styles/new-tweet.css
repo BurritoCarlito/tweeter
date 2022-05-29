@@ -38,4 +38,11 @@
   color: rgb(57, 40, 132);
 }
 
+.new-tweet div#errorMessage {
+  color: red;
+  display: flexbox;
+  margin-top: 20px;
+  border: 3px red solid;
+}
+
 

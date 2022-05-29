@@ -56,15 +56,12 @@ $(document).ready(() => {
     console.log("CLICK");
     event.preventDefault()
 
-    //create helper function to better access the array value, given the html input name
-
     let info = $(".form").serializeArray();
       if (info[0].value.length === 0 ) {
-        alert("Tweet Cannot be Empty!");
+        $(errorMessage).text("ERROR: Tweet cannot be empty!").slidedown(100);
       } else if (info[0].value.length > 140) {
-        alert("Tweet Cannot be longer than 140 characters")
+        $(errorMessage).text("ERROR: Tweet is too long! Try to Shorten it!").slidedown(100);
       } else {
-
 
     $.ajax({
       type: "POST",
