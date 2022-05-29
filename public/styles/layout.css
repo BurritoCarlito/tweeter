@@ -33,5 +33,10 @@ body {
  main {
   width: 100%;
   text-align: center;
-  background-color: #f4f1ec;
+  /* background-color: #f4f1ec; */
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-around;
 }

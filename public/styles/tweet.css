@@ -3,11 +3,12 @@ section.tweets-container {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 40px;
 }
 
 article.tweets {
   display: flex;
-  width: 80vw;
+  width: 100%;
   border: 3px solid #000000;
   border-radius: 11px;
   justify-content: space-between;
@@ -32,7 +33,7 @@ article.tweets div#avatar {
   width: 100%;
 }
 
-article.tweets div.avatar-Img{
+article.tweets div.avatar-Img {
   display: flex;
 }
 
