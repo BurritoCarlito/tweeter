@@ -5,10 +5,6 @@
  */
 
 $(document).ready(() => {
-
-    // const oneTweet = createTweetElement(data)
-    // $('.feed').append(oneTweet)
-  
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -16,7 +12,7 @@ $(document).ready(() => {
   };
 
   function createTweetElement(tweetData) {
-    const tweet = 
+    const tweet =
     `<article class="tweets">
         <header>
           <div id="avatar">
@@ -40,9 +36,9 @@ $(document).ready(() => {
             <i class="fa-solid fa-heart"></i>
           </div>
         </footer>
-    </article>`
+    </article>`;
   
-      return tweet  
+    return tweet;
   }
   
   function renderTweets(tweetData) {
@@ -51,34 +47,32 @@ $(document).ready(() => {
       $(".tweets-container").append($tweet);
     }
     return;
-  };
+  }
   
   $(".form").submit(function(event) {
-    console.log("CLICK");
-    event.preventDefault()
+    event.preventDefault();
 
     let info = $(".form").serializeArray();
-      if (info[0].value.length === 0 ) {
-        $(errorMessage).text("ERROR: Tweet cannot be empty!").slidedown(100);
-      } else if (info[0].value.length > 140) {
-        $(errorMessage).text("ERROR: Tweet is too long! Try to Shorten it!").slidedown(100);
-      } else {
+    if (info[0].value.length === 0) {
+      $(errorMessage).text("ERROR: Tweet cannot be empty!").slidedown(100);
+    } else if (info[0].value.length > 140) {
+      $(errorMessage).text("ERROR: Tweet is too long! Try to Shorten it!").slidedown(100);
+    } else {
 
-    $.ajax({
-      type: "POST",
-      url: "/tweets",
-      data: $(this).serialize(),
-    })
-    .then($(".form").text())
-    .then(loadTweets)
-    .then($(".form")[0].reset());
-  }
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: $(this).serialize(),
+      })
+        .then($(".form").text())
+        .then(loadTweets)
+        .then($(".form")[0].reset());
+    }
   });
 
   function loadTweets() {
-    console.log("loading tweets")
     $.ajax("/tweets", { method: "GET" })
-      .then(tweets => renderTweets(tweets))
+      .then(tweets => renderTweets(tweets));
   }
 
   loadTweets();
