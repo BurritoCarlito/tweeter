@@ -1,6 +1,5 @@
 header.user-info-header {
   height: 400px;
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,11 +20,3 @@ div.header-container {
   justify-content: center;
   align-items: center;
 }
-
-/* @media all and (min-width: 1024px) {
-  .header {
-    float: left;
-    flex-direction: row;
-    width: 100%;
-  }
-} */
