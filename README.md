@@ -8,10 +8,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 1. Full width Browser View
 
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/95609843/170907466-0f3f4c6e-721b-4313-b9e2-e4845d878eb1.png">
 
 
 2. Mobile View 
 
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/95609843/170907473-7cce564a-df1f-4528-998c-b4eae6d5cfab.png">
 
 
 # Features
