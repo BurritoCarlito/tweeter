@@ -8,11 +8,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 1. Full width Browser View
 
-![](file:///Users/carlo/Desktop/Screen%20Shot%202022-05-29%20at%207.08.13%20PM.png)
+![](<"https://user-images.githubusercontent.com/95609843/170906701-95af1455-c894-4410-9caa-e30897e43fe9.png">)
 
 2. Mobile View 
 
-![](file:///Users/carlo/Desktop/Screen%20Shot%202022-05-29%20at%207.07.56%20PM.png)
+![]("https://user-images.githubusercontent.com/95609843/170906733-b86acaff-f1c9-4b29-aff2-b8ff8c3d7599.png")
 
 # Features
 
